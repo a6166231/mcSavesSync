@@ -1,2 +1,2 @@
-repository_path=E:\\local-server\\mc-saves
-HMCL_versions_path=F:\\mc\\.minecraft\\versions
+repository_path=E:/local-server/mc-saves
+HMCL_versions_path=F:/mc/.minecraft/versions
