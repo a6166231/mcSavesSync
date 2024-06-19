@@ -101,6 +101,7 @@ public class GitCaller {
     public boolean gitCMD(String... paramVarArgs) {
         ProcessBuilder processBuilder = new ProcessBuilder(new String[0]);
         processBuilder.command(paramVarArgs);
+        processBuilder.directory(new File(repositoryPath));
         try {
             Process process = processBuilder.start();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
