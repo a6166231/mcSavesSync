@@ -108,7 +108,7 @@ public class GitCaller {
             while ((str = bufferedReader.readLine()) != null)
                 System.out.println(str);
             int i = process.waitFor();
-            if (i != 0) {
+            if (i != 0 && i != 1) {
                 System.out.println("git cmd faild: " + i);
                 return false;
             }
