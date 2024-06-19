@@ -108,7 +108,7 @@ public class GitCaller {
             while ((str = bufferedReader.readLine()) != null)
                 System.out.println(str);
             int i = process.waitFor();
-            if (i != 0 && i != 1) {
+            if (i != 0) {
                 BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(process.getErrorStream()));
                 String str2;
                 while ((str2 = bufferedReader2.readLine()) != null)
