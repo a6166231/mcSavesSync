@@ -46,7 +46,7 @@ public class GitCaller {
             if (list1.size() == 0)
                 continue;
             for (String str : list1) {
-                System.out.println("git -> local: " + str);
+                System.out.println("git -> local: " + str1 + "/" + str);
                 copyFolder(str3 + "/" + str, str2 + "/" + str);
             }
         }
@@ -64,7 +64,7 @@ public class GitCaller {
             if (!file.exists() || !file.isDirectory())
                 file.mkdir();
             for (String str : list1) {
-                System.out.println("local -> git: " + str);
+                System.out.println("local -> git: " + str1 + "/" + str);
                 copyFolder(str2 + "/" + str, str3 + "/" + str);
             }
         }
