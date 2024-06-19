@@ -22,16 +22,13 @@ public class GitCaller {
         File file = new File(paramString);
         if (!file.exists() || !file.isDirectory())
             throw new IllegalArgumentException("hmclVersionsPath is not exist: " + paramString);
-        List<String> list = Arrays.<File>stream(file.listFiles(File::isDirectory))
+
+        return Arrays.<File>stream(file.listFiles(File::isDirectory))
                 .map(File::getName)
                 .filter(str -> {
                     return !str.equals(".git");
                 })
                 .collect(Collectors.toList());
-        list.forEach(v -> {
-            System.out.println(v);
-        });
-        return list;
     }
 
     public void pull() {
