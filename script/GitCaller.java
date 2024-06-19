@@ -72,6 +72,8 @@ public class GitCaller {
         if (!bool)
             return;
         bool = gitCMD("git", "commit", "-a", "-m", "saves update");
+        System.out.println(bool);
+
         if (!bool)
             return;
         gitCMD("git", "push");
