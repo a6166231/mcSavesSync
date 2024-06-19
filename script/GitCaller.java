@@ -74,7 +74,7 @@ public class GitCaller {
         bool = gitCMD("git", "commit", "-a", "-m", "saves update");
         if (!bool)
             return;
-        // gitCMD("git", "push");
+        gitCMD("git", "push");
     }
 
     public void copyFolder(String paramString1, String paramString2) {

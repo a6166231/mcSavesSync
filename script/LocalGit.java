@@ -16,6 +16,8 @@ public class LocalGit {
         GitCaller gitCaller = new GitCaller();
         gitCaller.init(cfgReader.hmclVersionsPath, cfgReader.repository_path);
 
+        System.out.println("=========================================");
+
         if (gitType.equals("pull")) {
             gitCaller.pull();
         } else if (gitType.equals("commit")) {
