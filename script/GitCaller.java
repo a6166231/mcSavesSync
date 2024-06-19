@@ -48,8 +48,10 @@ public class GitCaller {
             List<String> list1 = getAllVersionDirs(str3);
             if (list1.size() == 0)
                 continue;
-            for (String str : list1)
+            for (String str : list1) {
+                System.out.println("git -> local: " + str);
                 copyFolder(str3 + "/" + str, str2 + "/" + str);
+            }
         }
     }
 
@@ -64,8 +66,10 @@ public class GitCaller {
             File file = new File(str3);
             if (!file.exists() || !file.isDirectory())
                 file.mkdir();
-            for (String str : list1)
+            for (String str : list1) {
+                System.out.println("local -> git: " + str);
                 copyFolder(str2 + "/" + str, str3 + "/" + str);
+            }
         }
         boolean bool = gitCMD("git", "add", ".");
         if (!bool)
@@ -73,6 +77,7 @@ public class GitCaller {
         bool = gitCMD("git", "commit", "-a", "-m", "saves update");
         if (!bool)
             return;
+        // gitCMD("git", "push");
     }
 
     public void copyFolder(String paramString1, String paramString2) {
